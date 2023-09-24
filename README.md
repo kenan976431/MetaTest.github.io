@@ -1,1 +1,9 @@
-README.md
+# MetaTest
+
+## Abstract
+Deep learning (DL) is a critical tool for real-world applications, and comprehensive testing of DL models is vital to ensure their quality before deployment. However, recent studies have shown that even subtle deviations in DL operators can result in catastrophic consequences, underscoring the importance of rigorous testing of these components. Unlike testing other DL system components, operator analysis poses unique challenges due to complex inputs and uncertain outputs.
+The existing DL operator testing approach Duo has limitations in terms of testing efficiency and error localization. In this paper, we propose \emph{Meta}, a novel operator testing framework based on metamorphic testing that automatically tests and localizes bugs based on metamorphic relations (MRs). Meta distinguishes itself in three key ways: (1) it considers both parameters and input tensors to detect operator errors, enabling it to identify both implementation and precision errors; (2) it uses MRs to guide the generation of more effective inputs (i.e., tensors and parameters) in less time; (3) it achieves accurate error localization by tracing the error to the input level of the operator based on MR violations.
+We designed 16 metamorphic relations (MRs) for testing 10 widely used DL operators. To assess the effectiveness of our proposed Meta, we conducted experiments on 8 released versions of 5 popular DL libraries. Our results revealed that Meta successfully detected \jcy{17 bugs, including 12 new ones} that were reported to the respective platforms and partially confirmed. Additionally, Meta demonstrated high efficiency, outperforming the baseline Duo by detecting $\times\sim$1.89 times more errors while only requiring $\times\sim$0.5 times the cost of Duo.
+
+## Framework
+![image](https://github.com/kenan976431/MetaTest.github.io/assets/30360640/e97ebf7c-d754-400e-bc15-2bf40b8e60f0)
